@@ -20,6 +20,14 @@
 	}
 }
 
+@function image-path($image) {
+	@return "/assets/" + $image;
+}
+
+@function image-url($image) {
+	@return url(image-path($image));
+}
+
 .clearfix {
 	@include clearfix;
 }
