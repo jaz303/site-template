@@ -1,0 +1,8 @@
+{
+  "name": "site-template",
+  "description": "My site template",
+  "license": "MIT",
+  "dependencies": {
+    "spinup": "^1.1.0"
+  }
+}
