@@ -35,6 +35,11 @@
   <script src="/assets/plugins.js" type="text/javascript"></script>
   <script src="/assets/bundle.js" type="text/javascript"></script>
 
+  <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+':35729/livereload.js?snipver=2"></' + 'script>')
+  </script>
+
 </head>
 
 <body>
