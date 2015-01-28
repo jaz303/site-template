@@ -1,0 +1,63 @@
+$grid_columns       : 12        !default ;
+$grid_gutter        : 10px      !default ;
+$grid_breakpoint    : desktop   !default ;
+$grid_max_width     : 960px     !default ;
+
+// ---
+
+$grid_px_gutter     : unit($grid_gutter) == "px" ;
+
+@function columns($n) {
+    @if $grid_px_gutter {
+        @return (100% / $grid_columns) * $n;
+    } @else {
+        $one_column: (100% - ($grid_gutter * ($grid_columns - 1))) / $grid_columns;
+        @return ($one_column * $n) + ($grid_gutter * ($n - 1));
+    }
+}
+
+.section {
+    @include clearfix;
+    width: 100%;
+    margin: 0 auto;
+    
+    @if $grid_px_gutter {
+        max-width: $grid_max_width + $grid_gutter;
+    } @else {
+        max-width: $grid_max_width;
+    }
+}
+
+@include mq($from: $grid_breakpoint) {
+    .c {
+        float: left;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        
+        @if $grid_px_gutter {
+            border: 0px solid rgba(0,0,0,0);
+            -moz-background-clip: padding-box !important;
+            -webkit-background-clip: padding-box !important;
+            background-clip: padding-box !important;
+            border-left-width: $grid_gutter / 2;
+            border-right-width: $grid_gutter / 2;
+        } @else {
+            margin-left: $grid_gutter;
+        }
+
+        &:first-child {
+            @if $grid_px_gutter {
+                
+            } @else {
+                margin-left: 0;
+            }
+        }
+    }
+
+    @for $i from 1 through $grid_columns {
+        .s#{$i} {
+            width: columns($i);
+        }
+    }   
+}
