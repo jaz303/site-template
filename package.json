@@ -1,5 +1,5 @@
 {
-  "name": "site-template",
+  "name": "{{ $project_name }}",
   "description": "My site template",
   "license": "MIT",
   "dependencies": {
