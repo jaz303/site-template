@@ -1,10 +1,10 @@
 inputs:
 
 prompt project_name, prompt: "Project name: ",
-					 default: "site-template"
+                     default: "site-template"
 
 yesno create_repo, prompt: "Create git repo?",
-				   default: 1
+                   default: 1
 
 actions:
 
@@ -15,8 +15,8 @@ template inplace: package.json
 shell "npm install"
 
 if $create_repo then
-	copy optional/gitignore, .gitignore
-	shell "git init"
-	shell "git add ."
-	shell "git commit -m 'First commit'"
+    copy optional/gitignore, .gitignore
+    shell "git init"
+    shell "git add ."
+    shell "git commit -m 'First commit'"
 end
