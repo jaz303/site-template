@@ -1,4 +1,6 @@
+!ports $BASE:8000 $HTTP_PORT $LIVE_RELOAD_PORT
+
 scss --watch scss:public/assets
 watchify -o public/assets/bundle.js lib/main.js
-php -S 127.0.0.1:8000 -t public
-livereloadx
+php -S 127.0.0.1:$HTTP_PORT -t public
+livereloadx -p $LIVE_RELOAD_PORT

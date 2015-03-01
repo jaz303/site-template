@@ -38,7 +38,7 @@
 
   <script>
     document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
-':35729/livereload.js?snipver=2"></' + 'script>')
+':<?= $_ENV['LIVE_RELOAD_PORT'] ?>/livereload.js?snipver=2"></' + 'script>')
   </script>
 
 </head>
