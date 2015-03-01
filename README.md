@@ -1,4 +1,4 @@
-# site-template
+# tpl-simple-site
 
 A little site template I use.
 
