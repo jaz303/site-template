@@ -2,7 +2,5 @@
   "name": "{{ $project_name }}",
   "description": "My site template",
   "license": "MIT",
-  "dependencies": {
-    "spinup": "^1.1.0"
-  }
+  "dependencies": {}
 }

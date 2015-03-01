@@ -1,4 +1,4 @@
-scss --watch scss:web/assets
-watchify -o web/assets/bundle.js lib/main.js
-php -S 127.0.0.1:8000 -t web -d include_path=.:$SPINDIR/tpl
+scss --watch scss:public/assets
+watchify -o public/assets/bundle.js lib/main.js
+php -S 127.0.0.1:8000 -t public
 livereloadx
