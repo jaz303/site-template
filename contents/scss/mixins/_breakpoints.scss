@@ -1,5 +1,0 @@
-@import '_mq.scss';
-
-// TODO: is it possible to generate these dynamically?
-@mixin mobile() 	{ @include mq($until: desktop) { @content } }
-@mixin desktop()	{ @include mq($from: desktop) { @content } }

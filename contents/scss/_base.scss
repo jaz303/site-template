@@ -1,0 +1,708 @@
+//
+// This file is auto-generated
+// To update, edit `generator.js` then run `make`
+
+$mq-responsive: true !default;
+$mq-breakpoints: ( tablet: 580px, desktop: 900px );
+$mq-static-breakpoint: desktop;
+
+@import 'mixins/reset';
+@import 'mixins/helpers';
+@import 'mixins/mq';
+@import 'mixins/grid_generator';
+
+@mixin phone-only() {
+    @include mq($until: tablet) { @content }
+}
+
+@mixin tablet-only() {
+    @include mq($from: tablet, $until: desktop) { @content }
+}
+
+@mixin desktop-only() {
+    @include mq($from: desktop) { @content }
+}
+
+@include phone-only() {
+    .tablet-only { display: none !important; }
+    .desktop-only { display: none !important; }
+    .no-phone { display: none !important; }
+}
+
+@include tablet-only() {
+    .phone-only { display: none !important; }
+    .desktop-only { display: none !important; }
+    .no-tablet { display: none !important; }
+}
+
+@include desktop-only() {
+    .phone-only { display: none !important; }
+    .tablet-only { display: none !important; }
+    .no-desktop { display: none !important; }
+}
+
+//
+// phone
+
+@mixin ph-section--x {
+    @include clearfix;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 580px;
+}
+
+@mixin ph-c--x {
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 0px solid rgba(0,0,0,0);
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+@mixin ph-p1--x {
+    margin-left: 100%;
+}
+
+@mixin ph-s1--x {
+    width: 100%;
+}
+
+@include phone-only {
+    .section { @include ph-section--x; }
+    .c { @include ph-c--x; }
+    .ph-p1 { @include ph-p1--x; }
+    .ph-s1 { @include ph-s1--x; }
+}
+
+@mixin ph-section { @include ph-section--x; }
+
+@mixin ph-s1 {
+    @include phone-only {
+        @include ph-c--x;
+        @include ph-s1--x;
+    }
+}
+
+@mixin ph-p1 {
+    @include phone-only {
+        @include ph-p1--x;
+    }
+}
+
+//
+// tablet
+
+@mixin tb-section--x {
+    @include clearfix;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 720px;
+}
+
+@mixin tb-c--x {
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 0px solid rgba(0,0,0,0);
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    border-left-width: 11px;
+    border-right-width: 11px;
+}
+
+@mixin tb-p1--x {
+    margin-left: 8.333333333333334%;
+}
+
+@mixin tb-s1--x {
+    width: 8.333333333333334%;
+}
+
+@mixin tb-p2--x {
+    margin-left: 16.666666666666668%;
+}
+
+@mixin tb-s2--x {
+    width: 16.666666666666668%;
+}
+
+@mixin tb-p3--x {
+    margin-left: 25%;
+}
+
+@mixin tb-s3--x {
+    width: 25%;
+}
+
+@mixin tb-p4--x {
+    margin-left: 33.333333333333336%;
+}
+
+@mixin tb-s4--x {
+    width: 33.333333333333336%;
+}
+
+@mixin tb-p5--x {
+    margin-left: 41.66666666666667%;
+}
+
+@mixin tb-s5--x {
+    width: 41.66666666666667%;
+}
+
+@mixin tb-p6--x {
+    margin-left: 50%;
+}
+
+@mixin tb-s6--x {
+    width: 50%;
+}
+
+@mixin tb-p7--x {
+    margin-left: 58.333333333333336%;
+}
+
+@mixin tb-s7--x {
+    width: 58.333333333333336%;
+}
+
+@mixin tb-p8--x {
+    margin-left: 66.66666666666667%;
+}
+
+@mixin tb-s8--x {
+    width: 66.66666666666667%;
+}
+
+@mixin tb-p9--x {
+    margin-left: 75%;
+}
+
+@mixin tb-s9--x {
+    width: 75%;
+}
+
+@mixin tb-p10--x {
+    margin-left: 83.33333333333334%;
+}
+
+@mixin tb-s10--x {
+    width: 83.33333333333334%;
+}
+
+@mixin tb-p11--x {
+    margin-left: 91.66666666666667%;
+}
+
+@mixin tb-s11--x {
+    width: 91.66666666666667%;
+}
+
+@mixin tb-p12--x {
+    margin-left: 100%;
+}
+
+@mixin tb-s12--x {
+    width: 100%;
+}
+
+@include tablet-only {
+    .section { @include tb-section--x; }
+    .c { @include tb-c--x; }
+    .tb-p1 { @include tb-p1--x; }
+    .tb-p2 { @include tb-p2--x; }
+    .tb-p3 { @include tb-p3--x; }
+    .tb-p4 { @include tb-p4--x; }
+    .tb-p5 { @include tb-p5--x; }
+    .tb-p6 { @include tb-p6--x; }
+    .tb-p7 { @include tb-p7--x; }
+    .tb-p8 { @include tb-p8--x; }
+    .tb-p9 { @include tb-p9--x; }
+    .tb-p10 { @include tb-p10--x; }
+    .tb-p11 { @include tb-p11--x; }
+    .tb-p12 { @include tb-p12--x; }
+    .tb-s1 { @include tb-s1--x; }
+    .tb-s2 { @include tb-s2--x; }
+    .tb-s3 { @include tb-s3--x; }
+    .tb-s4 { @include tb-s4--x; }
+    .tb-s5 { @include tb-s5--x; }
+    .tb-s6 { @include tb-s6--x; }
+    .tb-s7 { @include tb-s7--x; }
+    .tb-s8 { @include tb-s8--x; }
+    .tb-s9 { @include tb-s9--x; }
+    .tb-s10 { @include tb-s10--x; }
+    .tb-s11 { @include tb-s11--x; }
+    .tb-s12 { @include tb-s12--x; }
+}
+
+@mixin tb-section { @include tb-section--x; }
+
+@mixin tb-s1 {
+    @include tablet-only {
+        @include tb-c--x;
+        @include tb-s1--x;
+    }
+}
+
+@mixin tb-s2 {
+    @include tablet-only {
+        @include tb-c--x;
+        @include tb-s2--x;
+    }
+}
+
+@mixin tb-s3 {
+    @include tablet-only {
+        @include tb-c--x;
+        @include tb-s3--x;
+    }
+}
+
+@mixin tb-s4 {
+    @include tablet-only {
+        @include tb-c--x;
+        @include tb-s4--x;
+    }
+}
+
+@mixin tb-s5 {
+    @include tablet-only {
+        @include tb-c--x;
+        @include tb-s5--x;
+    }
+}
+
+@mixin tb-s6 {
+    @include tablet-only {
+        @include tb-c--x;
+        @include tb-s6--x;
+    }
+}
+
+@mixin tb-s7 {
+    @include tablet-only {
+        @include tb-c--x;
+        @include tb-s7--x;
+    }
+}
+
+@mixin tb-s8 {
+    @include tablet-only {
+        @include tb-c--x;
+        @include tb-s8--x;
+    }
+}
+
+@mixin tb-s9 {
+    @include tablet-only {
+        @include tb-c--x;
+        @include tb-s9--x;
+    }
+}
+
+@mixin tb-s10 {
+    @include tablet-only {
+        @include tb-c--x;
+        @include tb-s10--x;
+    }
+}
+
+@mixin tb-s11 {
+    @include tablet-only {
+        @include tb-c--x;
+        @include tb-s11--x;
+    }
+}
+
+@mixin tb-s12 {
+    @include tablet-only {
+        @include tb-c--x;
+        @include tb-s12--x;
+    }
+}
+
+@mixin tb-p1 {
+    @include tablet-only {
+        @include tb-p1--x;
+    }
+}
+
+@mixin tb-p2 {
+    @include tablet-only {
+        @include tb-p2--x;
+    }
+}
+
+@mixin tb-p3 {
+    @include tablet-only {
+        @include tb-p3--x;
+    }
+}
+
+@mixin tb-p4 {
+    @include tablet-only {
+        @include tb-p4--x;
+    }
+}
+
+@mixin tb-p5 {
+    @include tablet-only {
+        @include tb-p5--x;
+    }
+}
+
+@mixin tb-p6 {
+    @include tablet-only {
+        @include tb-p6--x;
+    }
+}
+
+@mixin tb-p7 {
+    @include tablet-only {
+        @include tb-p7--x;
+    }
+}
+
+@mixin tb-p8 {
+    @include tablet-only {
+        @include tb-p8--x;
+    }
+}
+
+@mixin tb-p9 {
+    @include tablet-only {
+        @include tb-p9--x;
+    }
+}
+
+@mixin tb-p10 {
+    @include tablet-only {
+        @include tb-p10--x;
+    }
+}
+
+@mixin tb-p11 {
+    @include tablet-only {
+        @include tb-p11--x;
+    }
+}
+
+@mixin tb-p12 {
+    @include tablet-only {
+        @include tb-p12--x;
+    }
+}
+
+//
+// desktop
+
+@mixin dk-section--x {
+    @include clearfix;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+@mixin dk-c--x {
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 0px solid rgba(0,0,0,0);
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    border-left-width: 10.5px;
+    border-right-width: 10.5px;
+}
+
+@mixin dk-p1--x {
+    margin-left: 8.333333333333334%;
+}
+
+@mixin dk-s1--x {
+    width: 8.333333333333334%;
+}
+
+@mixin dk-p2--x {
+    margin-left: 16.666666666666668%;
+}
+
+@mixin dk-s2--x {
+    width: 16.666666666666668%;
+}
+
+@mixin dk-p3--x {
+    margin-left: 25%;
+}
+
+@mixin dk-s3--x {
+    width: 25%;
+}
+
+@mixin dk-p4--x {
+    margin-left: 33.333333333333336%;
+}
+
+@mixin dk-s4--x {
+    width: 33.333333333333336%;
+}
+
+@mixin dk-p5--x {
+    margin-left: 41.66666666666667%;
+}
+
+@mixin dk-s5--x {
+    width: 41.66666666666667%;
+}
+
+@mixin dk-p6--x {
+    margin-left: 50%;
+}
+
+@mixin dk-s6--x {
+    width: 50%;
+}
+
+@mixin dk-p7--x {
+    margin-left: 58.333333333333336%;
+}
+
+@mixin dk-s7--x {
+    width: 58.333333333333336%;
+}
+
+@mixin dk-p8--x {
+    margin-left: 66.66666666666667%;
+}
+
+@mixin dk-s8--x {
+    width: 66.66666666666667%;
+}
+
+@mixin dk-p9--x {
+    margin-left: 75%;
+}
+
+@mixin dk-s9--x {
+    width: 75%;
+}
+
+@mixin dk-p10--x {
+    margin-left: 83.33333333333334%;
+}
+
+@mixin dk-s10--x {
+    width: 83.33333333333334%;
+}
+
+@mixin dk-p11--x {
+    margin-left: 91.66666666666667%;
+}
+
+@mixin dk-s11--x {
+    width: 91.66666666666667%;
+}
+
+@mixin dk-p12--x {
+    margin-left: 100%;
+}
+
+@mixin dk-s12--x {
+    width: 100%;
+}
+
+@include desktop-only {
+    .section { @include dk-section--x; }
+    .c { @include dk-c--x; }
+    .dk-p1 { @include dk-p1--x; }
+    .dk-p2 { @include dk-p2--x; }
+    .dk-p3 { @include dk-p3--x; }
+    .dk-p4 { @include dk-p4--x; }
+    .dk-p5 { @include dk-p5--x; }
+    .dk-p6 { @include dk-p6--x; }
+    .dk-p7 { @include dk-p7--x; }
+    .dk-p8 { @include dk-p8--x; }
+    .dk-p9 { @include dk-p9--x; }
+    .dk-p10 { @include dk-p10--x; }
+    .dk-p11 { @include dk-p11--x; }
+    .dk-p12 { @include dk-p12--x; }
+    .dk-s1 { @include dk-s1--x; }
+    .dk-s2 { @include dk-s2--x; }
+    .dk-s3 { @include dk-s3--x; }
+    .dk-s4 { @include dk-s4--x; }
+    .dk-s5 { @include dk-s5--x; }
+    .dk-s6 { @include dk-s6--x; }
+    .dk-s7 { @include dk-s7--x; }
+    .dk-s8 { @include dk-s8--x; }
+    .dk-s9 { @include dk-s9--x; }
+    .dk-s10 { @include dk-s10--x; }
+    .dk-s11 { @include dk-s11--x; }
+    .dk-s12 { @include dk-s12--x; }
+}
+
+@mixin dk-section { @include dk-section--x; }
+
+@mixin dk-s1 {
+    @include desktop-only {
+        @include dk-c--x;
+        @include dk-s1--x;
+    }
+}
+
+@mixin dk-s2 {
+    @include desktop-only {
+        @include dk-c--x;
+        @include dk-s2--x;
+    }
+}
+
+@mixin dk-s3 {
+    @include desktop-only {
+        @include dk-c--x;
+        @include dk-s3--x;
+    }
+}
+
+@mixin dk-s4 {
+    @include desktop-only {
+        @include dk-c--x;
+        @include dk-s4--x;
+    }
+}
+
+@mixin dk-s5 {
+    @include desktop-only {
+        @include dk-c--x;
+        @include dk-s5--x;
+    }
+}
+
+@mixin dk-s6 {
+    @include desktop-only {
+        @include dk-c--x;
+        @include dk-s6--x;
+    }
+}
+
+@mixin dk-s7 {
+    @include desktop-only {
+        @include dk-c--x;
+        @include dk-s7--x;
+    }
+}
+
+@mixin dk-s8 {
+    @include desktop-only {
+        @include dk-c--x;
+        @include dk-s8--x;
+    }
+}
+
+@mixin dk-s9 {
+    @include desktop-only {
+        @include dk-c--x;
+        @include dk-s9--x;
+    }
+}
+
+@mixin dk-s10 {
+    @include desktop-only {
+        @include dk-c--x;
+        @include dk-s10--x;
+    }
+}
+
+@mixin dk-s11 {
+    @include desktop-only {
+        @include dk-c--x;
+        @include dk-s11--x;
+    }
+}
+
+@mixin dk-s12 {
+    @include desktop-only {
+        @include dk-c--x;
+        @include dk-s12--x;
+    }
+}
+
+@mixin dk-p1 {
+    @include desktop-only {
+        @include dk-p1--x;
+    }
+}
+
+@mixin dk-p2 {
+    @include desktop-only {
+        @include dk-p2--x;
+    }
+}
+
+@mixin dk-p3 {
+    @include desktop-only {
+        @include dk-p3--x;
+    }
+}
+
+@mixin dk-p4 {
+    @include desktop-only {
+        @include dk-p4--x;
+    }
+}
+
+@mixin dk-p5 {
+    @include desktop-only {
+        @include dk-p5--x;
+    }
+}
+
+@mixin dk-p6 {
+    @include desktop-only {
+        @include dk-p6--x;
+    }
+}
+
+@mixin dk-p7 {
+    @include desktop-only {
+        @include dk-p7--x;
+    }
+}
+
+@mixin dk-p8 {
+    @include desktop-only {
+        @include dk-p8--x;
+    }
+}
+
+@mixin dk-p9 {
+    @include desktop-only {
+        @include dk-p9--x;
+    }
+}
+
+@mixin dk-p10 {
+    @include desktop-only {
+        @include dk-p10--x;
+    }
+}
+
+@mixin dk-p11 {
+    @include desktop-only {
+        @include dk-p11--x;
+    }
+}
+
+@mixin dk-p12 {
+    @include desktop-only {
+        @include dk-p12--x;
+    }
+}
+

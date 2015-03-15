@@ -1,13 +1,11 @@
-$mq-responsive 				: true !default;
-$mq-base-font-size			: 16px;
-$mq-breakpoints				: ( desktop: 480px );
-//$mq-show-breakpoints 		: ( desktop );
+@import 'base';
 
-$site_font_size				: $mq-base-font-size ;
+//
+// Site variables
 
-@import 'mixins/reset.scss';
-@import 'mixins/breakpoints.scss';
-@import 'mixins/helpers.scss';
-@import 'mixins/grid.scss';
+$site_font_size: 14px;
 
-@import 'content.scss';
+//
+//
+
+@import 'content';
